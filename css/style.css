@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans",sans-serif;
+}
+
+body{
+    overflow: hidden;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #373a3a;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: #24252a;
+}
+
+.about-section{
+    background: url(../img/me.jpg) no-repeat left;
+    background-size: 55%;
+    background-color: #373a3a;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.inner-container{
+    box-shadow: 5px 10px a#00000026;
+    width: 55%;
+    float: right;
+    background-color: #405654;
+    padding: 150px;
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.text{
+    font-size: 13px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: px;
+}
+
+a{ 
+    color: inherit; 
+} 
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav__links a, .cta, .overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+}
+
+.nav__links li {
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #0088a9;
+}
+
+.cta {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+}
+
+.cta:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+.container {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 650px;
+    padding: 50px;
+    background: rgb(225, 225, 225);
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 15px 5px rgba(0,0,0,.2);
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background: url(../img/job.jpg);
+    border-radius: 50%;
+    float: left;
+    shape-outside: circle();
+    margin: 65px 20px 50px 0;
+}
+
+  /* Menu Telefono */
+
+.menu {
+    display: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+    width: 100%;
+}
+
+.overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #0088a9;
+}
+.overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+}
+
+.main{
+    margin: 2%;
+}
+
+.card{
+    width: 20%;
+    display: inline-block;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 5px; 
+    margin: 2%;
+    background-color: #707070;
+}
+
+.image img{
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.title{
+    text-align: center;
+    padding: 10px;
+}
+
+h1{
+    font-size: 20px;
+}
+
+.des{
+    padding: 3px;
+    text-align: center;
+    padding-top: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+button{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background-color: rgb(174, 174, 174);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding:10px;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about-section{
+        padding: 0;
+    }
+    .inner-container{
+        padding: 60px;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+    font-size: 20px;
+    }
+
+    .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .nav__links, .cta {
+    display: none;
+    }
+
+    .menu {
+    display: initial;
+    }
+}
